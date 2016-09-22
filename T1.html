@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" 		content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="plugin/jquery.ma.infinitypush.css" />
+	<script type="text/javascript" src="js/jquery/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery-ui-1.10.2.custom.min.js"></script>
+	<script type="text/javascript" src="plugin/jquery.ma.infinitypush.js"></script>
+	<!-- 图片轮播 -->
+	<script type=text/javascript src="js/T1.js"></script>
+	<link rel=stylesheet type=text/css href="css/T1.css">
+	<!-- 自定样式 -->
+	<link rel=stylesheet type=text/css href="css/m1.css">
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			function responsive() {
+				if($(window).width() <= 767){
+					console.log('mobile navigation');
+					$('#primary-navigation').infinitypush();
+					$('body').removeClass('desktop');
+				} else {
+					console.log('desktop navigation');
+					$('#primary-navigation').infinitypush({
+						destroy:true
+					});
+					$('body').addClass('desktop');
+				}
+			}
+
+			function windowResize(){
+				$(window).resize(function(){
+					responsive();
+				});
+			}
+
+			responsive();
+			windowResize();
+
+		});
+	</script>
+
+	<title>Document</title>
+</head>
+<body id="body">
+
+<div id="wrapper">
+	<nav id="primary-navigation">
+		<ul>
+			<!-- <li><a href="#" title="Nav"><strong>打开下级标签</strong></a>
+				<ul>
+					<li><a href="#" title="Sub Nav">LInk</a></li>
+					<li><a href="#" title="Sub Nav">LInk</a></li>
+				</ul>
+			</li> -->
+			<li><a href="#" title="Nav"><strong>打开下级标签</strong></a>
+				<ul>
+					<li><a href="#" title="Sub Nav">LInk</a></li>
+					<li><a href="#" title="Sub Nav">LInk</a></li>
+					<li><a href="#" title="Sub Nav">LInk</a></li>
+					<li><a href="#" title="Sub Nav">LInk</a></li>
+				</ul>
+			</li>
+			<li><a href="#" title="Nav">LInk</a></li>
+			<li><a href="#" title="Nav">LInk</a></li>
+		</ul>
+		
+		<ul class="second">
+		
+			<li><a href="#" title="Nav"><strong>打开下级标签</strong></a>
+				<ul>
+					<li><a href="#" title="Sub Nav">LInk</a></li>
+					<!-- <li><a href="#" title="Sub Nav 2"></a></li>
+					<li><a href="#" title="Sub Nav 2"></a></li> -->
+					<li><a href="#" title="Sub Nav">LInk</a></li>
+				</ul>
+			</li>
+			<li><a href="#" title="Nav">LInk</a></li>
+			<li><a href="#" title="Nav">LInk</a></li>
+		
+		</ul>
+		<ul class="third">
+		
+			<li><a href="#" title="Nav"><strong>打开下级标签</strong></a>
+				<ul>
+					<li><a href="#" title="Nav">LInk</a></li>
+					<li><a href="#" title="Nav">LInk</a></li>
+					<li><a href="#" title="Nav">LInk</a></li>
+					<li><a href="#" title="Nav">LInk</a></li>
+					<li><a href="#" title="Nav">LInk</a></li>
+					<li><a href="#" title="Nav">LInk</a></li>
+				</ul>
+			</li>
+			<li><a href="#" title="Nav">LInk</a></li>
+			<li><a href="#" title="Nav">LInk</a></li>
+			
+		
+		</ul>
+	</nav>
+
+	<!-- 图片轮播模块 -->
+	<div class="photoCarousel">
+		<div class="area">
+			<a id="prev" class="prevBtn qq" href="javascript:void(0)"></a>
+			<a id="next" class="nextBtn qq" href="javascript:void(0)"></a>
+			<div class="js" id="js">
+				<div class="box01">
+					<img onClick="location.href='#'"  src="images/01.jpg">
+					<img onClick="location.href='#'"  style="DISPLAY: none" src="images/02.jpg"> 
+					<img onClick="location.href='#'" style="DISPLAY: none"  src="images/03.jpg">
+					<img onClick="location.href='#'" style="DISPLAY: none"  src="images/04.jpg"> 
+					<img onClick="location.href='#'" style="DISPLAY: none" src="images/05.jpg">	
+				</div>
+			
+			<!-- 轮播下方导航按钮 -->
+			<div class="jsNav" id="jsNav">
+				<a class="trigger imgSelected" href="javascript:void(0)">1</a>
+				<a class="trigger" href="javascript:void(0)">2</a>
+				<a class="trigger" href="javascript:void(0)">3</a>
+				<a class="trigger" href="javascript:void(0)">4</a>
+				<a class="trigger" href="javascript:void(0)">5</a>		
+			</div>
+			</div>
+		</div>
+	</div>
+	<div id="main">
+		
+		<!-- <h1>标题1</h1>
+		<p class="blindtext">
+		移动端活动的开发。实习期间，我参与了公司“微信&手机app幸运大抽奖”活动的需求分析与前端网页开发项目。主要负责的部分是网页重构，即在设计原型的基础上使用HTML、CSS、JavaScript等语言技术在浏览器中重现所需求的效果。其中几个较为关键的部分包括：①页面布局。页面重构的重点之一是页面布局，因为页面是直接呈现给用户，给用户带来第一印象的大门。布局的基本原理是使用HTML语言“建造大楼的结构”，再使用CSS对“大楼”进行“装修”。如何合理的选择标签，如何正确的设置标签属性、标签样式需要认真思考与设计。盒子模型和、定位、浮动这几点更是决定页面元素排布的关键，若不能准确的使用可能导致如“模块出现在不希望看到的位置”的问题。②页面操作逻辑。在“大楼”的结构与装饰都已经完成后，下一步就是使用JavaScript实现“大楼”内部各种元素的“功能”。网页并非静态的图片，一个页面上有按钮，有下拉框，有漂浮的文字，有闪烁的logo……
+		</p> -->
+		<div class="artBox">
+			
+		</div>
+		<div class="artBox">
+			<h1><a href="./art/art1.html">关于闭包（Closure）</a></h1>
+			<div class="para">闭包（closure）是Javascript语言的一个难点，也是它的特色，很多高级应用都要依靠闭包实现。<br>
+			<hr>
+			一、变量的作用域
+			要理解闭包，首先必须理解Javascript特殊的变量作用域。</div>
+			<p class="more">more..</p>
+		</div>
+		<div class="artBox">
+			<h1>Hello web</h1>
+			<div class="para">Welcome to here! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.<br>
+			</div>
+			<p class="more">more..</p>
+		</div>
+	</div> <!-- End Main -->
+	<footer>
+        <ul>
+            <li><small>&copy Chriz 2016|</small></li>
+            <li><small><a href="mailto:hzferrari@qq.com">Email To Me</a></small> </li>
+        </ul>
+    </footer>
+</div> <!-- End Wrapper -->	
+</body>
+</html>

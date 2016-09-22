@@ -1,0 +1,110 @@
+/* CSS Document */
+
+h1,h2,h3,h4,h5,h6,p,ul,ol,li,form,img,dl,dt,dd,table,th,td,blockquote,fieldset,div,strong,label,em{margin:0;padding:0;border:0;}
+ul,ol,li{list-style:none;}
+input,button{margin:0;font-size:12px;vertical-align:middle;}
+body{font-size:12px;font-family:Arial, Helvetica, sans-serif; color:#333; }
+table{border-collapse:collapse;border-spacing:0;}
+
+a{color:#333;text-decoration:none;}
+
+
+.photoCarousel .area{
+	width:100%;
+	overflow: hidden;
+	position:relative;
+	cursor:pointer;
+	margin-bottom: 10px;
+
+}
+@media screen and (max-width: 768px){
+	.js{
+		width:100%;
+	}
+}
+@media screen and (min-width: 768px){
+	.js{
+		width:768px;
+		margin:0 auto;
+	}
+}
+.js{
+	position:relative;
+	/*width:100%;*/
+	/*height:349px;*/
+	margin:0 auto;
+
+}
+.js img{
+	width:100%;
+}
+.prevBtn{
+	/*background:url(../images/btn01h.jpg) no-repeat;*/
+	height:47px;
+	width:32px;
+	display:block;
+	position:absolute;
+	top:120px;
+}
+.prevBtn:hover{
+	background:url(../images/btn01.jpg) no-repeat;
+}
+.nextBtn {
+	/*BACKGROUND:url(../images/btn02h.jpg) no-repeat;*/
+	height:47px; 
+	width: 32px; 
+	display:block; 
+	position:absolute; 
+	right:0; 
+	top:120px;
+}
+.nextBtn:hover{
+	background:url(../images/btn02.jpg) no-repeat;
+}
+.qq{ 
+	display:none; 
+	z-index:200;
+}
+
+.imgSelected {background: url(../images/jsNav.png) no-repeat;}
+
+.jsNav{
+	position: absolute;
+	bottom: 10px;
+	width:100%;
+	text-align: center;
+	background-color: rgba(100,149,237,0); 
+	/*opacity:0.5;*/
+	_background:none;/*_background这个属性是只对IE6起效*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true', sizingMethod='scale', src="images/bg01.png");/*IE6*/
+	z-index: 100;
+}
+.jsNav a{
+	width:20px;
+	font-size:12px;
+	/*margin-right: 6px;*/
+	display: inline-block;
+	height: 20px;
+	line-height: 20px;
+	/*float:left;*/
+	text-align: center;
+	color: #fff;
+
+}
+.jsNav a:hover{
+	/*background:url(../images/bg01.gif) no-repeat;*/
+	color: #fff; 
+	background-color: rgba(	112,128,144,0.5);
+	border-radius: 45%;
+	-webkit-border-radius: 45%;
+	text-decoration:none;
+}
+.jsNav .imgSelected { 
+	/*background:url(../images/bg01.gif) no-repeat;*/
+	color: #fff;
+	background-color: rgba(	112,128,144,0.5);
+	border-radius: 45%;
+	-webkit-border-radius: 45%;
+}
+
+
