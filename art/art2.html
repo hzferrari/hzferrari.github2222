@@ -52,12 +52,34 @@
 					opacity: 1;
 				}
 			}
+
+			.loveText{
+				position: absolute;
+				top:75%;
+				width: 100%;
+				margin:0 auto;
+				text-align: center;
+				font-size: 60px;
+				font-family: "Brush Script MT";
+			}
+			.loveText span{
+				font-size: 40px;
+				font-family: "Arial";
+			}
 		</style>
 	</head>
 	<body>
-		<div class="heart"></div>
+		<div id="heart" class="heart"></div>
+		<div id="loveText" class="loveText" style="display: none;">Wish you a lovely night. <span>(●'◡'●)ﾉ</span></div>
 		<script>
 			// alert(window.navigator.userAgent);
+			window.onload = function(){
+				var x = document.getElementById("heart");
+				var y = document.getElementById("loveText");
+				x.onclick = function(){
+					y.style.display = "block";
+				}
+			}
 		</script>
 	</body>
 </html
