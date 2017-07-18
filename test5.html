@@ -23,24 +23,22 @@
         <a id = "tryOpenApp" href = "http://caiyun.feixin.10086.cn:7070/portal/mobile.jsp">尝试打开和彩云app</a>
     </div>
     <div class = "remark">如果已安装和彩云则打开，未安装则打开下载页</div>
-    
+
 <script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
 <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="/js/jquery.js"></script>
 <script>
     $(function () {
 
         function _openAppUrl(appUrl){
             var ua = navigator.userAgent.toLocaleLowerCase(),
-                openBrowser = null,
                 deviceVersion = 0,
                 matchVersion = null,
                 openAppType = "",
                 downLoadUrl = 'http://caiyun.feixin.10086.cn:7070/portal/mobile.jsp';
           
             //如果是在微信内部点击的时候
-            // if(ua.indexOf("micromessenger") != -1 ){
-            if(false){
+            if(ua.indexOf("micromessenger") != -1 ){
                 _openAppUrl = function(){
                     alert("请点击右上角用浏览器查看！");
                 }
@@ -55,48 +53,56 @@
                         openAppType = "newType";
                     }
                 }else if(matchVersion = navigator.userAgent.match(/Android\s*(\d+)/)){
+
                     //Android的设备
                     deviceVersion = matchVersion[1] || 0;
-          
+
+        alert(navigator.userAgent);
+        alert(matchVersion);
+        alert
+
+
                     if(deviceVersion - 5 >= 0){
                         openAppType = "newType";
                     }
-          
                 }else{
                     //PC端的设备
                     openAppType = "pc";
                 }
-          
           
                 if(openAppType == "pc"){
                     _openAppUrl = function(){
                         alert("DEMO，请在移动端的浏览器查看！");
                     }
                 }else if(openAppType == "newType"){
-                    //使用新的方法，尝试打开APP
                     //IOS>9,Android>5的版本
                     _openAppUrl = function(url){
-                        var history = window.history,
-                            body = $("body").eq(0),
-                            ifr = $('<iframe class = "full-screen dn" style = "z-index:101;border:none;width:100%;height:100%;" src="'+downLoadUrl+'"></iframe>');
+                        // var history = window.history,
+                        //     body = $("body").eq(0),
+                        //     ifr = $('<iframe class = "full-screen dn" style = "z-index:101;border:none;width:100%;height:100%;" src="'+downLoadUrl+'"></iframe>');
           
-                        body.append(ifr);
-                        $(window).on("popstate",function(e){
-                            var state = history.state;
+                        // body.append(ifr);
+                        // $(window).on("popstate",function(e){
+                        //     var state = history.state;
                             
-                            if(!state){
-                                ifr.addClass("dn");
-                            }
-                        });
+                        //     if(!state){
+                        //         ifr.addClass("dn");
+                        //     }
+                        // });
           
                         function _show(){
-                            history.pushState({}, "下载APP链接页", "");
-                            ifr.removeClass("dn");
+                            // history.pushState({}, "下载APP链接页", "");
+                            // ifr.removeClass("dn");
+                            // window.open(downLoadUrl); //在新建窗口中打开链接
+                            window.location.href = downLoadUrl; //在当前窗口中打开链接
                         }
           
                         _openAppUrl = function(url){
                             location.href = url;
-                            _show();
+                            setTimeout(function(){
+                                _show();
+                            },2000);
+                            
                         }
           
                         _openAppUrl(url);
@@ -150,7 +156,8 @@
             _openAppUrl(appUrl);
         }
       
-        var appUrl = "hecaiyun://launch";
+        var appUrl = "mcloud://";
+        // var appUrl = "hecaiyun://launch";//安卓客户端拉起链接
       
         $("#tryOpenApp").on("click",function(){
             _openAppUrl(appUrl);
