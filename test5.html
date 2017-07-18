@@ -38,7 +38,7 @@
 <script>
     $(function () {
 
-        function _openApp(){
+        function _openAppUrl(){
 
             //判断设备是安卓还是苹果系统
             var u = navigator.userAgent;
@@ -95,7 +95,7 @@
       
       
         $("#tryOpenApp").on("click",function(){
-            _openApp();
+            _openAppUrl();
             return false;
         });
     	
