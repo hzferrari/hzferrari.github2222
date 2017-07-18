@@ -20,7 +20,7 @@
 <body>
     <h1>尝试打开APP的DEMO</h1>
     <div class = "custom-border border-color">
-        <a id = "tryOpenApp" href = "https://itunes.apple.com/app/id544673497">尝试打开和彩云app</a>
+        <a id = "tryOpenApp" href = "#">尝试打开和彩云app</a>
     </div>
     <div class = "remark">如果已安装和彩云则打开，未安装则打开下载页</div>
 
@@ -48,13 +48,15 @@
                 if(matchVersion = navigator.userAgent.match(/OS\s*(\d+)/)){
                     //赋值，并且判断
                     //IOS设备的浏览器
+
+alert("ios");
                     deviceVersion = matchVersion[1] || 0;
           
                     if(deviceVersion - 9 >= 0){
                         openAppType = "newType";
                     }
                 }else if(matchVersion = navigator.userAgent.match(/Android\s*(\d+)/)){
-
+alert("android")
                     //Android的设备
                     deviceVersion = matchVersion[1] || 0;
 
@@ -76,10 +78,11 @@
                         alert("DEMO，请在移动端的浏览器查看！");
                     }
                 }else if(openAppType == "newType"){
-
+alert("newType")
                     _openAppUrl = function(url){
 
                         function _show(){
+alert("_show")
                             // window.open(downLoadUrl); //在新建窗口中打开链接
                             window.location.href = downLoadUrl; //在当前窗口中打开链接
                         }
