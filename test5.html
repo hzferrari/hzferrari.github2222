@@ -35,8 +35,8 @@
                 deviceVersion = 0,
                 matchVersion = null,
                 openAppType = "",
-               // downLoadUrl = 'http://caiyun.feixin.10086.cn:7070/portal/mobile.jsp';
-                downLoadUrl = 'itms-apps://itunes.apple.com/app/id544673497';
+                // downLoadUrl = 'http://caiyun.feixin.10086.cn:7070/portal/mobile.jsp';
+                downLoadUrl = 'https://itunes.apple.com/app/id544673497';
           
             //如果是在微信内部点击的时候
             if(ua.indexOf("micromessenger") != -1 ){
@@ -58,9 +58,9 @@
                     //Android的设备
                     deviceVersion = matchVersion[1] || 0;
 
-//         alert(navigator.userAgent);
-//         alert(matchVersion);
-//         alert
+        // alert(navigator.userAgent);
+        // alert(matchVersion);
+        // alert(deviceVersion);
 
 
                     if(deviceVersion - 5 >= 0){
@@ -76,24 +76,10 @@
                         alert("DEMO，请在移动端的浏览器查看！");
                     }
                 }else if(openAppType == "newType"){
-                    //IOS>9,Android>5的版本
+
                     _openAppUrl = function(url){
-                        // var history = window.history,
-                        //     body = $("body").eq(0),
-                        //     ifr = $('<iframe class = "full-screen dn" style = "z-index:101;border:none;width:100%;height:100%;" src="'+downLoadUrl+'"></iframe>');
-          
-                        // body.append(ifr);
-                        // $(window).on("popstate",function(e){
-                        //     var state = history.state;
-                            
-                        //     if(!state){
-                        //         ifr.addClass("dn");
-                        //     }
-                        // });
-          
+
                         function _show(){
-                            // history.pushState({}, "下载APP链接页", "");
-                            // ifr.removeClass("dn");
                             // window.open(downLoadUrl); //在新建窗口中打开链接
                             window.location.href = downLoadUrl; //在当前窗口中打开链接
                         }
@@ -108,49 +94,6 @@
           
                         _openAppUrl(url);
           
-                    }
-                }else{
-                    //使用计算时差的方案打开APP
-                    var checkOpen = function (cb){
-                        var _clickTime = +(new Date()),
-                            _count = 0,
-                            intHandle = 0;
-          
-                        //启动间隔20ms运行的定时器，并检测累计消耗时间是否超过3000ms，超过则结束
-                        intHandle = setInterval(function(){
-                            _count++;
-                            var elsTime = +(new Date()) - _clickTime;
-                            
-                            if (_count>=100 || elsTime > 3000 ) {
-                                clearInterval(intHandle);
-                                //计算结束，根据不同，做不同的跳转处理，0表示已经跳转APP成功了
-                                if ( elsTime > 3000 || document.hidden || document.webkitHidden) {
-                                    cb(0);
-                                } else {
-                                    cb(1);
-                                }
-                                  
-                            }
-                        }, 20);
-                    }
-          
-                    _openAppUrl = function(url){
-                        var ifr = document.createElement('iframe');
-          
-                        ifr.src = url;
-                        ifr.style.display = 'none';
-          
-                        checkOpen(function(opened){
-                            if(opened === 1){
-                                location.href = downLoadUrl;
-                            }
-                        });
-          
-                        document.body.appendChild(ifr);
-          
-                        setTimeout(function() {
-                            document.body.removeChild(ifr);
-                        }, 2000);
                     }
                 }
             }     
