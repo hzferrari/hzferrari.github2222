@@ -38,7 +38,7 @@
 <script>
     $(function () {
 
-        function _openAppUrl(){
+        function _openApp(){
 
             //判断设备是安卓还是苹果系统
             var u = navigator.userAgent;
@@ -62,6 +62,7 @@
 
                 }else if(isAndroid){
                     //Android的设备
+  alert("android");
                     appUrl = "hecaiyun://launch";//安卓客户端拉起链接
                     downLoadUrl = 'http://caiyun.feixin.10086.cn:7070/portal/mobile.jsp';
                 }else{
@@ -72,14 +73,15 @@
                 }
 
                 _openAppUrl = function(url){
-
+ alert("1");
                     function _show(){
-
+ alert("3");
                         // window.open(downLoadUrl); //在新建窗口中打开链接
                         window.location.href = downLoadUrl; //在当前窗口中打开链接
                     }
       
                     _openAppUrl = function(url){
+ alert("2");
                          window.location.href = url;
                         setTimeout(function(){
                             _show();
@@ -95,7 +97,7 @@
       
       
         $("#tryOpenApp").on("click",function(){
-            _openAppUrl();
+            _openApp();
             return false;
         });
     	
