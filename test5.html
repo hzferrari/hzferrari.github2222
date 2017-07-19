@@ -34,12 +34,11 @@
     <div>4</div>
 
 <script src="https://cdn.bootcss.com/jquery/3.2.0/jquery.js"></script>
-<!-- <script type="text/javascript" src="/js/jquery.js"></script> -->
+<script type="text/javascript" src="/js/jquery.js"></script>
 <script>
-alert("0");
+
     $(function(){
         function _openApp(){
-alert(" _openApp()");
             //判断设备是安卓还是苹果系统
             var ua = navigator.userAgent;
             var isAndroid = ua.indexOf('Android') > -1 || ua.indexOf('Adr') > -1,
@@ -56,13 +55,11 @@ alert(" _openApp()");
                 //在浏览器打开，判断是在移动端还是在PC端
                 if(isiOS){
                     //IOS设备的浏览器
-alert("ios");
                     appUrl = "mcloud://";//ios客户端拉起链接
                     downLoadUrl = 'itms-apps://itunes.apple.com/app/id544673497';  
 
                 }else if(isAndroid){
                     //Android的设备
-alert("android");
                     appUrl = "hecaiyun://launch";//安卓客户端拉起链接
                     downLoadUrl = 'http://caiyun.feixin.10086.cn:7070/portal/mobile.jsp';
                 }else{
@@ -77,12 +74,10 @@ alert("android");
                     function _show(){
 
                         // window.open(downLoadUrl); //在新建窗口中打开链接
-alert("show");
                         window.location.href = downLoadUrl; //在当前窗口中打开链接
                     }
       
                     _openAppUrl = function(url){
-alert("openurl");
                         location.href = url;
                         setTimeout(function(){
                             _show();
