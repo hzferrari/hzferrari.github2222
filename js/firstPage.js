@@ -3,6 +3,7 @@
 	$("input").on("click",function(){
 		$(".rule").css("margin-bottom","300px");
 		setTimeout(function(){
+			alert("1");
 			this.scrollIntoView();
 		},2000);
 		setTimeout(function(){
