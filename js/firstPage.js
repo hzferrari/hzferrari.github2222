@@ -4,7 +4,7 @@
 		$(".rule").css("margin-bottom","300px");
 		setTimeout(function(){
 			alert("1");
-			this.scrollIntoView();
+			$("#phoneNum").scrollIntoView();
 		},2000);
 		setTimeout(function(){
 			$(".rule").css("margin-bottom","40px");
