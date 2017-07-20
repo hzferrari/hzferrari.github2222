@@ -10,8 +10,13 @@
 		
 	})
 	//点击“获取验证码”按钮，检测输入是否符合规则，切是否属于白名单
-	document.getElementById("getCode").onclick = function(){checkWhithList()};
+	document.getElementById("getCode").onclick = function(){
+		checkWhithList();
+		timeCount(this);
+
+	};
 	function checkWhithList(){
+		
 		if(document.getElementById("phoneNum").value.length < 11){
 			document.getElementById("warm").style.visibility = "visible";
 			document.getElementById("warm").textContent = "请输入11位的手机号码！";
@@ -29,11 +34,33 @@
 			}
 		}
 	}
+	//验证码倒计时
+	function timeCount(tBtn){
+		var clock = '';
+		var nums = 5;
+		var btn = tBtn;
+		btn.disabled = true; //将按钮置为不可点击
+		btn.value = nums+'s';
+		clock = setInterval(doLoop, 1000); //一秒执行一次
+		
+		function doLoop(){
+			nums--;
+			if(nums > 0){
+				btn.value = nums+'s';
+		 	}else{
+		 		clearInterval(clock); //清除js定时器
+		 		btn.disabled = false;
+		 		btn.value = '获取验证码';
+		 		nums = 5; //重置时间
+		 	}
+		}
+	}
 	document.getElementById("phoneNum").onclick = function(){
 		document.getElementById("warm").style.visibility = "hidden";
 	};
 
 	//点击“点击领取”按钮，检测验证码输入是否符合规则，切是否正确
+	//
 
 })
 

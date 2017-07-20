@@ -133,30 +133,29 @@ p{
 	float: left;
 }
 .getCode{
-	height: 25px;
+	width:100px;
+	/*height: 25px;*/
 	float: left;
-	margin-top: 3px;
+	margin-top: 5px;
 	margin-left: 5px;
 	padding: 4px 8px;
-	padding-top: 5px;
+	/*padding-top: 5px;*/
+	text-align: center;
 	font-size: 1em;
-	font-weight: 500 ;
+	font-weight: 500;
 	color: #e40077;
+	background-color: #ffce37;
 	border: 1px solid;
 	border-radius: 20px;
     -webkit-border-radius: 20px;
-    cursor: pointer;
+    /*cursor: pointer;*/
 }
-.getCode:active{
-	color: #fff;
-	border-color:#e40077;
-	text-shadow: 1px 1px 1px #e40077;
-}
-/*.getCode:visited{
+/*.getCode:active{
 	color: #fff;
 	border-color:#e40077;
 	text-shadow: 1px 1px 1px #e40077;
 }*/
+
 .inputArea{
 	overflow: auto;
 	margin-bottom: 5px;
