@@ -4,7 +4,7 @@
 		$this = this;
 		$(".rule").css("margin-bottom","300px");
 		setTimeout(function(){
-			$this.scrollIntoView();
+			document.getElementById("phoneNum").scrollIntoViewIfNeeded();
 		},500);
 
 		setTimeout(function(){
