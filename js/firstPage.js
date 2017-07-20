@@ -1,11 +1,12 @@
  $(function(){
 	//点击输入框时，页面滚动到该位置
 	$("input").on("click",function(){
+		$this = this;
 		$(".rule").css("margin-bottom","300px");
 		setTimeout(function(){
-			alert("1");
-			$("#phoneNum").scrollIntoView();
-		},2000);
+			$this.scrollIntoView();
+		},1000);
+
 		setTimeout(function(){
 			$(".rule").css("margin-bottom","40px");
 		},200);
