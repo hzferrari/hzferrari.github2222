@@ -3,9 +3,10 @@
 	$("input").on("click",function(){
 		$this = this;
 		$(".rule").css("margin-bottom","300px");
-		
-			document.getElementById("phoneNum").scrollIntoViewIfNeeded();
-		
+		setTimeout(function(){
+			alert("1");
+			$this.scrollIntoView();
+		},1000);
 
 		setTimeout(function(){
 			$(".rule").css("margin-bottom","40px");
