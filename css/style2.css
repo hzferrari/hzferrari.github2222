@@ -139,10 +139,11 @@ p{
 	margin-top: 3px;
 	margin-left: 5px;
 	padding: 4px 8px;
+	padding-top: 5px;
 	font-size: 1em;
 	font-weight: 500 ;
 	color: #e40077;
-	border: 1.5px solid;
+	border: 1px solid;
 	border-radius: 20px;
     -webkit-border-radius: 20px;
     cursor: pointer;
