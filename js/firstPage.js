@@ -1,6 +1,6 @@
  $(function(){
 	//点击输入框时，页面滚动到该位置
-	$("input").on("click",function(){
+	$("#phoneNum,#identifyCode").on("click",function(){
 		$this = this;
 		$(".rule").css("margin-bottom","300px");
 		$this.scrollIntoView();
@@ -16,7 +16,7 @@
 
 	};
 	function checkWhithList(){
-		
+		//先判断手机号格式是否正确
 		if(document.getElementById("phoneNum").value.length < 11){
 			document.getElementById("warm").style.visibility = "visible";
 			document.getElementById("warm").textContent = "请输入11位的手机号码！";
