@@ -15,24 +15,26 @@
 
 </head>
 <body>
-	<div class="mainBox">
+	<div class="mainBox" id="mainBox">
 		<div class="logoOne"><img src="images/logoOne.png"></div>
 		<div class="sloganOne">随时随地存和彩云</div>
 		<div class="sloganTwo">2G和彩云定向上行流量+500G/3个月和彩云空间</div>
 		<div class="inputArea">
 			<img src="images/icon1.png" id="icon1">
 			<!-- 限制长度为11位的数字 -->
-			<input type="text" name="phoneNum" class="phoneNum" id="check" maxlength="11" min="11" placeholder="输入手机号码">
+			<input type="text" name="phoneNum" class="phoneNum" id="phoneNum" maxlength="11" min="11" placeholder="输入手机号码">
 			<div class="innerBox" >
 				<!-- 限制长度为6位的数字 -->
 				<input type="text" name="identifyCode" class="identifyCode" maxlength="6" min="6" >
 				<p name="获取验证码" class="getCode" id="getCode">获取验证码</p>
 			</div>
 		</div>
-		<div class="warm" id="warm">请输入11位的手机号码！</div>
-		<div name="点击领取按钮" class="button"><img src="images/button1.png"></div>
+		<div class="warm" id="warm">&nbsp</div>
+		<div name="点击领取按钮" class="button getAward" id="getAward"><img src="images/button1.png"></div>
 		<div class="rule">详细活动规则&nbsp<p>>></p></div>
 	</div>
+
 	<script type="text/javascript" src="js/firstPage.js"></script>
+	<script type="text/javascript" src="js/openAppUrl.js"></script>
 </body>
 </html>
