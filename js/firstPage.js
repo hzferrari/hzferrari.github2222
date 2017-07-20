@@ -5,7 +5,7 @@
 		$(".rule").css("margin-bottom","300px");
 		setTimeout(function(){
 			$this.scrollIntoView();
-		},1000);
+		},500);
 
 		setTimeout(function(){
 			$(".rule").css("margin-bottom","40px");
