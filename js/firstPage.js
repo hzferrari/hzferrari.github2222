@@ -3,10 +3,7 @@
 	$("input").on("click",function(){
 		$this = this;
 		$(".rule").css("margin-bottom","300px");
-		setTimeout(function(){
-			$this.scrollIntoView();
-		},500);
-
+		$this.scrollIntoView();
 		setTimeout(function(){
 			$(".rule").css("margin-bottom","40px");
 		},200);
