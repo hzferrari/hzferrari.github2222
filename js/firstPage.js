@@ -3,9 +3,9 @@
 	$("input").on("click",function(){
 		$this = this;
 		$(".rule").css("margin-bottom","300px");
-		setTimeout(function(){
+		
 			document.getElementById("phoneNum").scrollIntoViewIfNeeded();
-		},500);
+		
 
 		setTimeout(function(){
 			$(".rule").css("margin-bottom","40px");
