@@ -4,7 +4,6 @@
 		$this = this;
 		$(".rule").css("margin-bottom","300px");
 		setTimeout(function(){
-			alert("1");
 			$this.scrollIntoView();
 		},1000);
 
