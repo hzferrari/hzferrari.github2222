@@ -16,7 +16,7 @@
 	};
 	function checkWhithList(tBtn){
 		var thisBtn = tBtn;
-		var flag = true;
+		var flag = false;
 		//获取输入的号码
 		var phoneNum = document.getElementById("phoneNum").value;
 		var phoneNumStr = phoneNum.toString(10);	
@@ -24,42 +24,18 @@
         var WitePatrn = /(^1380288[0-9]{4}$)|(^1392220[0-9]{4}$)|(^1390222[0-9]{4}$)/;
         //先判断手机号格式是否正确
         if (!patrn.exec(phoneNum)){
-        	flag = false;
         	document.getElementById("warm").style.visibility = "visible";
 			document.getElementById("warm").textContent = "请输入正确的手机号码！";
         }else if (!WitePatrn.exec(phoneNum)){
-        	flag = false;
         	alert("该号码不参与活动"); 	
         }else{
-        	// alert("验证码已发送，请查看手机短信");
-        	document.getElementById("warm").style.visibility = "visible";
+        	 //手机号码是否属于白名单号段内，发送验证码
+			timeCount(thisBtn);
+        	// document.getElementById("warm").style.visibility = "visible";
 			// document.getElementById("warm").textContent = "验证码已发送，请查看手机短信!";
     		// document.getElementById("warm").style.color = "blue";
         }  
-        //手机号码是否属于白名单号段内，发送验证码
-		if(flag){
-			timeCount(thisBtn);
-		}
-        
-		
-		// if(document.getElementById("phoneNum").value.length < 11){
-			
-		// }else{
-		// 	//判断手机号码是否属于白名单号段内
-			
-		// 	if(phoneNumStr.indexOf("1380288") === 0){
-		// 		// alert("属于白名单,\"1380288\"开头");
-		// 	}else if(phoneNumStr.indexOf("1392220") === 0){
-		// 		// alert("属于白名单,\"1392220\"开头");
-		// 	}else if(phoneNumStr.indexOf("1390222") === 0){
-		// 		// alert("属于白名单,\"1390222\"开头");
-		// 	}else{
-		// 		alert("不在白名单");	
-				
-		// 	}
-			
-			
-		// }
+    
 	}
 	//验证码倒计时
 	function timeCount(tBtn){
