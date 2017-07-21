@@ -225,6 +225,7 @@ p{
    z-index: 99;
    transition: all 500ms ease;
    font-size: 0px;
+   overflow: auto;
 }
 .box1{
    margin-top: -200%;
@@ -272,6 +273,4 @@ p{
 }
 .Windowpop2{
    text-decoration: none;
-   color: #ff0036;
-
 }
