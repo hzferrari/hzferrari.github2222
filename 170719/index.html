@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>上行流量</title>
+	<!-- 内容类型 -->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<!-- 屏幕缩放 -->
+	<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi = medium-dpi">
+
+	<!-- <link rel="stylesheet" type="text/css" href="css/base-min.css">	 -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="https://cdn.bootcss.com/jquery/3.2.0/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+
+</head>
+<body>
+	<div class="mainBox" id="mainBox">
+		<div class="logoOne"><img src="images/logoOne.png" onclick="return false"></div>
+		<div class="sloganOne">随时随地存和彩云</div>
+		<div class="sloganTwo">2G和彩云定向上行流量+500G/3个月和彩云空间</div>
+		<div class="inputArea">
+			<img src="images/icon1.png" id="icon1">
+			<!-- 限制长度为11位的数字 -->
+			<input type="text" name="phoneNum" class="phoneNum" id="phoneNum" maxlength="11" min="11" placeholder="输入手机号码">
+			<div class="innerBox" >
+				<!-- 限制长度为6位的数字 -->
+				<input type="text" class="identifyCode" id="identifyCode" maxlength="6" min="6" >
+				<!-- <p name="获取验证码" class="getCode" id="getCode">获取验证码</p> -->
+				<input type="button" class="getCode" id="getCode" value="获取验证码">
+			</div>
+		</div>
+		<div class="warm" id="warm">&nbsp</div>
+		<div name="点击领取按钮" class="button getAward" id="getAward"><img src="images/button1.png"></div>
+		<div class="rule">详细活动规则&nbsp<p>>></p></div>
+	</div>
+
+	<script type="text/javascript" src="js/firstPage.js"></script>
+	<script type="text/javascript" src="js/openAppUrl.js"></script>
+</body>
+</html>
