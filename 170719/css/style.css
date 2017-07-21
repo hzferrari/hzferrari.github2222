@@ -59,7 +59,7 @@ p{
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	overflow: hidden;
+	overflow: auto;
 	background:url(../images/background.png) no-repeat;
 	background-size:100% auto; 
 }
@@ -82,7 +82,6 @@ p{
 	text-align: center;
 	font-size: 0.9em;
 	letter-spacing:-1px;
-	/*font-family: "Arial","Microsoft YaHei","宋体",sans-serif;*/
 	color: #333;
 	margin:8px auto;
 }
@@ -99,7 +98,6 @@ p{
 	border-radius: 4px;
     -webkit-border-radius: 4px;
     text-indent: 4%;
-    /*font-family: "Arial","Microsoft YaHei","宋体",sans-serif;*/
     font-size: 1.3em;
     overflow: auto;
 }
@@ -149,14 +147,8 @@ p{
 	border: 1px solid;
 	border-radius: 20px;
     -webkit-border-radius: 20px;
-    /*cursor: pointer;*/
-}
-/*.getCode:active{
-	color: #fff;
-	border-color:#e40077;
-	text-shadow: 1px 1px 1px #e40077;
-}*/
 
+}
 .inputArea{
 	overflow: auto;
 	margin-bottom: 5px;
@@ -166,7 +158,6 @@ p{
 	color:#ff2e2e;
 	padding-left: 9%; 
 	display: block;
-/*	font-weight: bold;*/
 	visibility:hidden;
 }
 /***点击领取图标***/
