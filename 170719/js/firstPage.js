@@ -98,8 +98,21 @@
 	   setTimeout(function () {
 	      $(".box").hide();
 	   },600);
-
 	})
+// loading 加载中
+	 $(function () {
+		 $("#box4").children(".box1").css("margin-top","50%");
+		 $("#box4").show();
+		 var loadState=0;
+		 if(loadState==1) $("#box4").hide();//状态为1代表取号成功，结束loading动画
+
+		 //最大loading等待时间10秒
+		 setTimeout(function () {
+			 $("#box4").hide();
+		 },3000);
+
+	 })
+
 
 })
 
