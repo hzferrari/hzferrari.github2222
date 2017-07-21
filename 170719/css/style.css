@@ -145,6 +145,7 @@ p{
 	font-weight: 500;
 	color: #e40077;
 	background-color: #ffce37;
+	background: transparent;
 	border: 1px solid;
 	border-radius: 20px;
     -webkit-border-radius: 20px;
@@ -162,7 +163,7 @@ p{
 }
 /***输入错误提示***/
 .warm{
-	color:	#ff2e2e;
+	color:#ff2e2e;
 	padding-left: 9%; 
 	display: block;
 /*	font-weight: bold;*/
