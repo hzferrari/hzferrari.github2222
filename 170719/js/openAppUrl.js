@@ -11,10 +11,9 @@ $(function(){
       
         //如果是在微信内部点击的时候
         // if(ua.toLocaleLowerCase().indexOf("micromessenger") != -1 ){
-        if(0==1)
+        if(0==1){
             _openAppUrl = function(){
                 alert("请点击右上角用浏览器查看！");
-            }
         }else{
             //在浏览器打开，判断是在移动端还是在PC端
             if(isiOS){
