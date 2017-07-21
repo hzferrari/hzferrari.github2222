@@ -59,7 +59,7 @@ p{
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	overflow: auto;
+	overflow: hidden;
 	background:url(../images/background.png) no-repeat;
 	background-size:100% auto; 
 }
