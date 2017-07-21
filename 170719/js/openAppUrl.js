@@ -10,8 +10,8 @@ $(function(){
         appUrl="";         
       
         //如果是在微信内部点击的时候
-        if(ua.toLocaleLowerCase().indexOf("micromessenger") != -1 ){
-   
+        // if(ua.toLocaleLowerCase().indexOf("micromessenger") != -1 ){
+        if(0==1)
             _openAppUrl = function(){
                 alert("请点击右上角用浏览器查看！");
             }

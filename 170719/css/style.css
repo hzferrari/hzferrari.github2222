@@ -51,7 +51,7 @@ img {
 p{
 	display: inline;
 }
-
+/*外层盒子*/
 .mainBox{
 	position: relative;
 	top:0;
@@ -63,6 +63,7 @@ p{
 	background:url(../images/background.png) no-repeat;
 	background-size:100% auto; 
 }
+/*标题logo*/
 .logoOne{
 	position: relative;
 	width: 100%;
@@ -72,6 +73,7 @@ p{
 	width: 100%;
 	height: 100%;
 }
+/*标语*/
 .sloganOne{
 	text-align: center;
 	font-size: 1.5em;
