@@ -172,6 +172,9 @@ p{
 	width: 100%;
 	height: 100%;
 }
+.getAward{
+	height: 100px;
+}
 /***详细活动规则>>***/
 .rule{
 	text-align: center;

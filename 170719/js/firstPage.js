@@ -67,10 +67,10 @@
 	//
 	// ADD
 
-
+	//“点击领取”按钮效果
 	$(".clickBtm").click(function(){
 	   $(".clickBtm").css("width","35%");
-	   setTimeout(function(){$(".clickBtm").css("width","40%");},1000);
+	   setTimeout(function(){$(".clickBtm").css("width","40%");},300);
 	});
 	//活动规则弹窗
 	$(".Windowpop2").click(function () {
