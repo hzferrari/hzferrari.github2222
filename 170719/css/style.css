@@ -228,11 +228,17 @@ p{
    height: 100%;
    position: fixed;
    transition: all 500ms ease;
+	text-align: center;
 }
 .box1 img{
    width:100%;
    display:block;
    vertical-align:middle;
+}
+.box1 p{
+	font-size: 20px;
+	font-weight: bold;
+	color: #fff;
 }
 .corimg{
    margin-top: -5px;
@@ -268,4 +274,34 @@ p{
 }
 .Windowpop2{
    text-decoration: none;
+}
+
+.WinArtical{
+	background: #fff;
+	width: 89.7%;
+	position: relative;
+	left: 0.9px;
+	margin: 0 auto;
+	margin-top: -1px;
+}
+.WinArtical div{
+	color: #333;
+
+}
+
+.loading{
+	-webkit-animation:run 5s linear 0s infinite;
+	width:25%!important;
+	position: relative;
+	margin: 0 auto;
+	margin-bottom: 5%;
+}
+@-webkit-keyframes run{
+	from{
+		-webkit-transform:rotate(0deg);
+	}
+	to{
+		-webkit-transform:rotate(360deg);
+	}
+
 }
