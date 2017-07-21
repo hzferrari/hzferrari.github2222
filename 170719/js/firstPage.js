@@ -70,5 +70,42 @@
 	//点击“点击领取”按钮，检测验证码输入是否符合规则，切是否正确
 	//
 
+	//
+	// ADD
+
+
+$(".clickBtm").click(function(){
+   $(".clickBtm").css("width","35%");
+   setTimeout(function(){$(".clickBtm").css("width","40%");},1000);
+});
+//活动规则弹窗
+$(".Windowpop2").click(function () {
+   $("#box3").children(".box1").css("margin-top","-200%");
+   $("#box3").show();
+   setTimeout(function () {
+      $("#box3").children(".box1").css("margin-top","10%");
+   },200);
+})
+//点击领取弹窗，领取成功弹出#box1，否则弹出#box2
+$(".Windowpop").click(function () {
+   var WinID="box";
+   var state=1;//后台返回状态，1为成功，0表示失败
+   if(state)  WinID=WinID+1;
+   else WinID=WinID+2;
+
+   $("#"+WinID).show();
+   setTimeout(function () {
+      $("#"+WinID).children(".box1").css("margin-top","10%");
+   },200);
+})
+
+$(".wclose").click(function () {
+   $(".box1").css("margin-top","-200%");
+   setTimeout(function () {
+      $(".box").hide();
+   },600);
+
+})
+
 })
 

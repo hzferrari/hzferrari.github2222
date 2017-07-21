@@ -188,3 +188,89 @@ p{
 	letter-spacing:2px;
 	font-weight: lighter;
 }
+
+
+/*ADD*/
+/*弹窗部分*/
+.clickBtm{
+   transition: all 300ms ease;
+}
+.bgitem{
+   width: 100%;
+}
+.mitem{
+   position:absolute;
+   width: 20%;
+   transition: all 500ms ease;
+}
+.ots{
+   position:absolute;
+   bottom: 0px;
+}
+.it0{ bottom:80px;left:50px;}
+.it1{ bottom:90px;left:110px;}
+.it2{ bottom:100px;left:160px;}
+.it3{ bottom:50px;left:190px;}
+.it4{ bottom:80px;left:250px;}
+.it5{ bottom:20px;right:40px;}
+
+
+.box{
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   background: rgba(0,0,0,0.3);
+   display: none;
+   z-index: 99;
+   transition: all 500ms ease;
+   font-size: 0px;
+}
+.box1{
+   margin-top: -200%;
+   width: 100%;
+   height: 100%;
+   position: fixed;
+   transition: all 500ms ease;
+}
+.box1 img{
+   width:100%;
+   display:block;
+   vertical-align:middle;
+}
+.corimg{
+   margin-top: -5px;
+}
+.close{
+   position:absolute;
+   right:8%;
+   bottom:40%;
+   width:7%!important;
+
+}
+.WinBtm{
+   width:60%!important;
+   position: relative;
+   margin: 0 auto;
+   margin-top:-22%;
+}
+.WinSus{ position: relative}
+.WinSus p{
+   position: relative;
+   font-size: 26px;
+   font-weight: bolder;
+   margin: 0 auto;
+   margin-top: -33%
+
+}
+.rlues{
+   margin-top: -200%;
+   margin:0 auto;
+   width:90%;
+   position: relative;
+   transition: all 500ms ease;
+}
+.Windowpop2{
+   text-decoration: none;
+   color: #ff0036;
+
+}
