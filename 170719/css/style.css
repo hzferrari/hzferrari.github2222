@@ -277,15 +277,18 @@ p{
 
 .WinArtical{
 	background: #fff;
-	width: 89.7%;
+	width: 89.8%;
 	position: relative;
-	left: 0.9px;
+	left: 1.3px;
 	margin: 0 auto;
 	margin-top: -1px;
+	text-align: left;
+	border-radius: 0px 0px 8px 8px;
 }
 .WinArtical div{
-	color: #333;
-
+	color: #444;
+   font-size: 16px;
+	margin:15px;
 }
 
 .loading{
