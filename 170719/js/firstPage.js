@@ -67,10 +67,10 @@
 
 	// ADD
 
-	//“点击领取”按钮效果
-	$(".WinBtm").click(function(){
-	   $(".WinBtm").css("cssText","width:59% !important");
-	   setTimeout(function(){$(".WinBtm").css("cssText","width:60% !important");},200);
+	//“去和彩云使用”按钮效果
+	$("#openAndDown").click(function(){
+	   $("#openAndDown").css("cssText","width:59% !important");
+	   setTimeout(function(){$("#openAndDown").css("cssText","width:60% !important");},200);
 	});
 	//活动规则弹窗
 	$(".Windowpop2").click(function () {
