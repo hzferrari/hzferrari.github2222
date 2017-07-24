@@ -46,7 +46,7 @@
 			nums--;
 			if(nums < 58){
 				if(nums > 0){
-				btn.value = nums+'s';
+				btn.value = nums+'s后获取';
 			 	}else{
 			 		clearInterval(clock); //清除js定时器
 			 		btn.disabled = false;

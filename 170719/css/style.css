@@ -121,6 +121,9 @@ p{
     .identifyCode{
     	width: 50%;
     }
+    .phoneNum, .identifyCode{
+		font-size: 1.1em;
+    }	
 }
 @media screen and (min-width: 410px) {
     .identifyCode{
@@ -215,7 +218,7 @@ p{
    position: fixed;
    width: 100%;
    height: 100%;
-   background: rgba(0,0,0,0.3);
+   background: rgba(0,0,0,0.65);
    display: none;
    z-index: 99;
    transition: all 500ms ease;
