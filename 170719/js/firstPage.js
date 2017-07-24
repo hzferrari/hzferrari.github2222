@@ -1,4 +1,4 @@
- $(function(){
+
 	//点击输入框时，页面滚动到该位置
 	$("#phoneNum,#identifyCode").on("click",function(){
 		$this = this;
@@ -66,7 +66,12 @@
 
 
 	// ADD
-
+	//“点击领取”按钮效果
+ 	$("#getAward").click(function(){
+ 	   $("#getAward").css("cssText","width:35% !important");
+ 	   setTimeout(function(){
+ 	   		$("#getAward").css("cssText","width:40% !important");},300);
+ 	});
 	//“去和彩云使用”按钮效果
 	$("#openAndDown").click(function(){
 	   $("#openAndDown").css("cssText","width:58% !important");
@@ -106,7 +111,7 @@
 		 var loadState=0;
 		 if(loadState==1) $("#box4").hide();//状态为1代表取号成功，结束loading动画
 
-		 //最大loading等待时间10秒
+		 //最大loading等待时间3秒
 		 setTimeout(function () {
 			 $("#box4").hide();
 		 },3000);
@@ -114,5 +119,4 @@
 	 })
 
 
-})
 
