@@ -25,7 +25,7 @@ $(function(){
             }else if(isAndroid){
                 //Android的设备
                 appUrl = "hecaiyun://launch";//安卓客户端拉起链接
-                downLoadUrl = 'http://caiyun.feixin.10086.cn:7070/portal/client_new.jsp?v=mCloud_812';
+                downLoadUrl = 'http://caiyun.feixin.10086.cn:7070/portal/client_new.jsp?v=mCloud_800 ';
             }else{
                 //PC端或其他设备
                 _openAppUrl = function(){

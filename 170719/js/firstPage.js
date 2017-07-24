@@ -64,13 +64,13 @@
 	//点击“点击领取”按钮，检测验证码输入是否符合规则，切是否正确
 	//
 
-	//
+
 	// ADD
 
 	//“点击领取”按钮效果
-	$(".clickBtm").click(function(){
-	   $(".clickBtm").css("width","35%");
-	   setTimeout(function(){$(".clickBtm").css("width","40%");},300);
+	$(".WinBtm").click(function(){
+	   $(".WinBtm").css("cssText","width:59% !important");
+	   setTimeout(function(){$(".WinBtm").css("cssText","width:60% !important");},200);
 	});
 	//活动规则弹窗
 	$(".Windowpop2").click(function () {
