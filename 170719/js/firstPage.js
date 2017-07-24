@@ -84,6 +84,8 @@
 	   setTimeout(function () {
 	      $("#box3").children(".box1").css("margin-top","10%");
 	   },200);
+	   //弹窗后禁止背景滚动
+	   $("body").css("overflow","hidden");
 	})
 	//点击领取弹窗，领取成功弹出#box1，否则弹出#box2
 	$(".Windowpop").click(function () {
@@ -96,6 +98,7 @@
 	   setTimeout(function () {
 	      $("#"+WinID).children(".box1").css("margin-top","10%");
 	   },200);
+	    $("body").css("overflow","hidden");
 	})
 
 	$(".wclose").click(function () {
@@ -103,6 +106,8 @@
 	   setTimeout(function () {
 	      $(".box").hide();
 	   },600);
+	   //关闭弹窗后恢复背景滚动
+	   $("body").css("overflow","auto");
 	})
 // loading 加载中
 	 $(function () {
