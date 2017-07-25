@@ -23,7 +23,10 @@
 		//移动号码段	
 		var mobileRex = /^((134[0-8]{1})|(13[0,1,2,3,5,6,7,8,9]\d)|(15[0,1,2,3,5,6,7,8,9]\d)|(17[0,7])\d|(18\d\d)|(14\d\d)|(106\d))\d{7}$/;
         //先判断手机号格式是否正确
-        if (!mobileRex.exec(phoneNum)){
+        if(phoneNumStr.length<=0){
+        	document.getElementById("warm").style.visibility = "visible";
+			document.getElementById("warm").textContent = "请输入手机号码！";
+        }else if (!mobileRex.exec(phoneNum)){
         	document.getElementById("warm").style.visibility = "visible";
 			document.getElementById("warm").textContent = "请输入正确的中国移动手机号码！";
         }else{
@@ -84,6 +87,8 @@
 	   setTimeout(function () {
 	      $("#box3").children(".box1").css("margin-top","10%");
 	   },200);
+	   //弹窗后禁止背景滚动
+	   $("body").css("overflow","hidden");
 	})
 	//点击领取弹窗，领取成功弹出#box1，否则弹出#box2，重复领取则弹出#box4
 	$(".Windowpop").click(function () {
@@ -99,6 +104,7 @@
 	   setTimeout(function () {
 	      $("#"+WinID).children(".box1").css("margin-top","10%");
 	   },200);
+	    $("body").css("overflow","hidden");
 	})
 
 	$(".wclose").click(function () {
@@ -106,6 +112,8 @@
 	   setTimeout(function () {
 	      $(".box").hide();
 	   },600);
+	   //关闭弹窗后恢复背景滚动
+	   $("body").css("overflow","auto");
 	})
 // loading 加载中
 	 $(function () {
