@@ -27,29 +27,7 @@ $(function(){
                 appUrl = "hecaiyun://launch";//安卓客户端拉起链接
                 downLoadUrl = 'http://caiyun.feixin.10086.cn:7070/portal/client_new.jsp?v=mCloud_800';
 
-                //安卓设备则使用计算时差的方式判断是否已经拉起app
-                var checkOpen = function (abc){
-                    var _clickTime = +(new Date()),
-                        _count = 0,
-                        intHandle = 0;
-      
-                    //启动间隔20ms运行的定时器，并检测累计消耗时间是否超过3000ms，超过则结束
-                    intHandle = setInterval(function(){
-                        _count++;
-                        var elsTime = +(new Date()) - _clickTime;
-                        
-                        if (_count>= 100|| elsTime > 3000 ) {
-                            clearInterval(intHandle);
-                            //计算结束，根据不同，做不同的跳转处理，0表示已经跳转APP成功了
-                            if ( elsTime > 3000 || document.hidden || document.webkitHidden) {
-                                abc(0);
-                            } else {
-                                abc(1);
-                            }
-                              
-                        }
-                    }, 20);
-                }
+                
             }else{
                 //PC端或其他设备
                 _openAppUrl = function(){
@@ -57,6 +35,30 @@ $(function(){
                 }
             }
 
+            //使用计算时差的方式判断是否已经拉起app
+            var checkOpen = function (abc){
+                var _clickTime = +(new Date()),
+                    _count = 0,
+                    intHandle = 0;
+  
+                //启动间隔20ms运行的定时器，并检测累计消耗时间是否超过3000ms，超过则结束
+                intHandle = setInterval(function(){
+                    _count++;
+                    var elsTime = +(new Date()) - _clickTime;
+                    
+                    if (_count>= 100|| elsTime > 3000 ) {
+                        clearInterval(intHandle);
+                        //计算结束，根据不同，做不同的跳转处理，0表示已经跳转APP成功了
+                        if ( elsTime > 3000 || document.hidden || document.webkitHidden) {
+                            abc(0);
+                        } else {
+                            abc(1);
+                        }
+                          
+                    }
+                }, 20);
+            }
+            
             _openAppUrl = function(url){
 
                 function _show(){
