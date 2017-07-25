@@ -93,7 +93,7 @@
 	//点击领取弹窗，领取成功弹出#box1，否则弹出#box2，重复领取则弹出#box4
 	$(".Windowpop").click(function () {
 	   var WinID="box";
-	   var state=2;//后台返回状态，1为成功，0表示失败,2表示重复领取
+	   var state=1;//后台返回状态，1为成功，0表示失败,2表示重复领取
 	   if(state)  {
 		   if(state==2)  WinID=WinID+5;
 		   else  WinID=WinID+1;
