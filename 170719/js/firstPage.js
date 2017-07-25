@@ -1,12 +1,12 @@
 
 	var phClickFlag = false;
 	//点击输入框时，页面滚动到该位置
-	$("#phoneNum").on("click",function(){
-		phClickFlag = true;
-		var $this = this;
-		viewScroll($this);
-	})
-	$("#identifyCode").on("click",function(){
+	// $("#phoneNum").on("click",function(){
+	// 	phClickFlag = true;
+	// 	var $this = this;
+	// 	viewScroll($this);
+	// })
+	$("#phoneNum，#identifyCode").on("click",function(){
 		if(phClickFlag === false){
 			var $this = this;
 			viewScroll($this);
