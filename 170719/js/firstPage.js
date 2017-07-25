@@ -10,7 +10,7 @@
 		if(phClickFlag === false){
 			var $this = this;
 			viewScroll($this);
-			phClickFlag === false
+			phClickFlag === true;
 		}	
 	})
 	var viewScroll = function(Bt){
