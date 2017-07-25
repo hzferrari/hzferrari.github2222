@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>尝试打开APP的DEMO</title>
-<link rel="stylesheet" href="/asserts/css/xmsCore.css" type="text/css" />
+<!-- <link rel="stylesheet" href="/asserts/css/xmsCore.css" type="text/css" /> -->
 <style>
     body{
         padding:5%;
@@ -20,13 +20,14 @@
 <body>
     <h1>尝试打开APP的DEMO</h1>
     <div class = "custom-border border-color">
-        <a id = "tryOpenApp" href = "http://caiyun.feixin.10086.cn:7070/portal/mobile.jsp">尝试打开和彩云app</a>
+        <a id = "tryOpenApp" href = "#">尝试打开和彩云app</a>
     </div>
     <div class = "remark">如果已安装和彩云则打开，未安装则打开下载页</div>
 
-<script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
-<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="/js/jquery.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.2.0/jquery.js"></script>
+<!-- <script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script> -->
+<!-- <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script> -->
+<script type="text/javascript" src="js/jquery.js"></script>
 <script>
     $(function () {
 
@@ -64,7 +65,7 @@
           
                 }else{
                     //PC端的设备
-                    openAppType = "pc";
+                    openAppType = "0";
                 }
           
           
@@ -105,7 +106,7 @@
                     }
                 }else{
                     //使用计算时差的方案打开APP
-                    var checkOpen = function (cb){
+                    var checkOpen = function (abc){
                         var _clickTime = +(new Date()),
                             _count = 0,
                             intHandle = 0;
@@ -115,13 +116,13 @@
                             _count++;
                             var elsTime = +(new Date()) - _clickTime;
                             
-                            if (_count>=100 || elsTime > 3000 ) {
+                            if (_count>=150 || elsTime > 3000 ) {
                                 clearInterval(intHandle);
                                 //计算结束，根据不同，做不同的跳转处理，0表示已经跳转APP成功了
                                 if ( elsTime > 3000 || document.hidden || document.webkitHidden) {
-                                    cb(0);
+                                    abc(0);
                                 } else {
-                                    cb(1);
+                                    abc(1);
                                 }
                                   
                             }
