@@ -119,10 +119,11 @@ $("#getAward").click(function () {
 		setTimeout(function () {
 			$("#"+WinID).children(".box1").css("margin-top","10%");
 		},200);
+		//弹窗后禁止页面滚动
 		$("body").on("touchmove",function(event){
 			event.preventDefault;
 		}, false)
-		$("body").css("overflow","hidden");
+		// $("body").css("overflow","hidden");
 	}
 
 })
@@ -140,7 +141,6 @@ $(".wclose").click(function () {
 //点击输入框时隐藏下方提示文字
 $("#phoneNum,#identifyCode").on("click",function(){
 	$("#warm").css("visibility","hidden");
-	$("body").off("touchmove");
 })
 // loading 加载中
 $(function () {
