@@ -56,7 +56,7 @@ $(function(){
                         }
                           
                     }
-                }, 40);
+                }, 30);
             }
 
             _openAppUrl = function(url){
