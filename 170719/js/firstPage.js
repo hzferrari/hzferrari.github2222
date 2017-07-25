@@ -73,9 +73,9 @@
  	   		$("#getAward").css("cssText","width:40% !important");},300);
  	});
 	//“去和彩云使用”按钮效果
-	$(".openAndDown").click(function(){
-	   $(".openAndDown").css("cssText","width:58% !important");
-	   setTimeout(function(){$(".openAndDown").css("cssText","width:60% !important");},400);
+	$("#openAndDown").click(function(){
+	   $("#openAndDown").css("cssText","width:58% !important");
+	   setTimeout(function(){$("#openAndDown").css("cssText","width:60% !important");},400);
 	});
 	//活动规则弹窗
 	$(".Windowpop2").click(function () {
