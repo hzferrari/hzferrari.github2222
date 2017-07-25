@@ -46,17 +46,17 @@ $(function(){
                     _count++;
                     var elsTime = +(new Date()) - _clickTime;
                     
-                    if (_count>= 200 || elsTime > 3000 ) {
+                    if (elsTime > 2000 ) {
                         clearInterval(intHandle);
                         //计算结束，根据不同，做不同的跳转处理，0表示已经跳转APP成功了
-                        if ( elsTime > 3000 || document.hidden || document.webkitHidden) {
+                        if ( elsTime > 2000 || document.hidden || document.webkitHidden) {
                             abc(0);
                         } else {
                             abc(1);
                         }
                           
                     }
-                }, 15);
+                }, 20);
             }
 
             _openAppUrl = function(url){
