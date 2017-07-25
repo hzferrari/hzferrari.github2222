@@ -60,21 +60,11 @@ $(function(){
             }
 
             _openAppUrl = function(url){
-
-                // function _show(){
-                //     window.location.href = downLoadUrl; //在当前窗口中打开链接
-                // }
-               
+         
                //点击后同时进行本地app拉起与网页转跳行为
                 _openAppUrl = function(url){
                     location.href = url;
                      
-                    //1.点击后立即尝试打开本地app；
-                    //2.点击后2秒，当前网页转跳到url。
-                    // setTimeout(function(){
-                    //     _show();
-                    // },2000);
-
                     //点击按钮后0.1+2=2.1秒没有转跳到app则转跳下载链接
                     //(checkOpen()定时不能超过2秒)
                     setTimeout(function(){
