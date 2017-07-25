@@ -239,7 +239,7 @@ p{
    display:block;
    vertical-align:middle;
 }
-#box1 img,#box2 img{
+#box1 img,#box2 img,#box5 img,#box6 img{
 	width:92%;
 	position: relative;
 	margin:0 auto;
