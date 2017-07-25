@@ -73,18 +73,7 @@
 			
 		}
 	}
-	// document.getElementById("phoneNum ").onclick = function(){
-	// 	document.getElementById("warm").style.visibility = "hidden";
-	// };
 
-
-	// ADD
-	//“点击领取”按钮效果
- 	// $("#getAward").click(function(){
- 	//    $("#getAward").css("cssText","width:35% !important");
- 	//    setTimeout(function(){
- 	//    		$("#getAward").css("cssText","width:40% !important");},300);
- 	// });
 	//“去和彩云使用”按钮效果
 	$(".openAndDown").click(function(){
 	   $(".openAndDown").css("cssText","width:58% !important");

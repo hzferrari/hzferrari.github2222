@@ -171,6 +171,7 @@ p{
 	margin:0px auto;
 	margin-top: 5px;
 	width: 40%;
+	transition: all 300ms ease;
 }
 .button img{
 	width: 100%;
@@ -192,9 +193,7 @@ p{
 
 /*ADD*/
 /*弹窗部分*/
-.clickBtm{
-   transition: all 300ms ease;
-}
+
 .bgitem{
    width: 100%;
 }
