@@ -96,11 +96,17 @@
  		$("#getAward").css("cssText","width:35% !important");
  	   	setTimeout(function(){
  	   		$("#getAward").css("cssText","width:40% !important");},300);
-		//检测验证码输入是否符合规则，切是否正确
- 	   if($("#identifyCode").val().length <=0 ){
+
+ 	   	//检测手机号码是否有输入
+ 	   	if($("#phoneNum").val().length <=0 ){
+ 	   		document.getElementById("warm").style.visibility = "visible";
+			document.getElementById("warm").textContent = "请输入手机号码！";
+ 	    }
+		//检测验证码是否有输入
+ 	    else if($("#identifyCode").val().length <=0 ){
  	   		document.getElementById("warm").style.visibility = "visible";
 			document.getElementById("warm").textContent = "请输入验证码！";
- 	   }else{
+ 	    }else{
  	   	   var WinID="box";
 		   var state=1;//后台返回状态，1为成功，0表示失败,2表示重复领取,3表示非白名单
 		   if(state)  {
@@ -115,7 +121,7 @@
 		      $("#"+WinID).children(".box1").css("margin-top","10%");
 		   },200);
 		    $("body").css("overflow","hidden");
- 	   }
+ 	    }
 
 	})
 
