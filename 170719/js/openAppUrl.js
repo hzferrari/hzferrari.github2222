@@ -61,9 +61,9 @@ $(function(){
 
             _openAppUrl = function(url){
 
-                function _show(){
-                    window.location.href = downLoadUrl; //在当前窗口中打开链接
-                }
+                // function _show(){
+                //     window.location.href = downLoadUrl; //在当前窗口中打开链接
+                // }
                
                //点击后同时进行本地app拉起与网页转跳行为
                 _openAppUrl = function(url){
@@ -79,7 +79,7 @@ $(function(){
                     checkOpen(function(opened){
                         //跳转app失败
                         if(opened === 1){
-                            _show();
+                            location.href = downLoadUrl;
                         }
                     });
                     
