@@ -82,10 +82,10 @@
 		<div class="inputArea">
 			<img src="images/icon1.png" id="icon1">
 			<!-- 限制长度为11位的数字 -->
-			<input type="text" name="phoneNum" class="phoneNum" id="phoneNum" maxlength="11" min="11" placeholder="输入手机号码">
+			<input type="text" name="phoneNum" onkeyup="this.value=this.value.replace(/\D/g,'')"  class="phoneNum" id="phoneNum" maxlength="11" min="11" placeholder="输入手机号码" >
 			<div class="innerBox" >
 				<!-- 限制长度为6位的数字 -->
-				<input type="text" class="identifyCode" id="identifyCode" maxlength="6" min="6" placeholder="请输入短信验证码">
+				<input type="text" onkeyup="this.value=this.value.replace(/\D/g,'')" class="identifyCode" id="identifyCode" maxlength="6" min="6" placeholder="请输入短信验证码">
 				<input type="button" class="getCode" id="getCode" value="获取验证码">
 			</div>
 		</div>
