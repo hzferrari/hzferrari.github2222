@@ -23,7 +23,10 @@
 		//移动号码段	
 		var mobileRex = /^((134[0-8]{1})|(13[0,1,2,3,5,6,7,8,9]\d)|(15[0,1,2,3,5,6,7,8,9]\d)|(17[0,7])\d|(18\d\d)|(14\d\d)|(106\d))\d{7}$/;
         //先判断手机号格式是否正确
-        if (!mobileRex.exec(phoneNum)){
+        if(phoneNumStr.length<=0){
+        	document.getElementById("warm").style.visibility = "visible";
+			document.getElementById("warm").textContent = "请输入手机号码！";
+        }else if (!mobileRex.exec(phoneNum)){
         	document.getElementById("warm").style.visibility = "visible";
 			document.getElementById("warm").textContent = "请输入正确的中国移动手机号码！";
         }else{

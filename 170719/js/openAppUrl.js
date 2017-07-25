@@ -32,12 +32,9 @@ $(function(){
                     alert("DEMO，请在移动端的浏览器查看！");
                 }
             }
-
             _openAppUrl = function(url){
 
                 function _show(){
-
-                    // window.open(downLoadUrl); //在新建窗口中打开链接
                     window.location.href = downLoadUrl; //在当前窗口中打开链接
                 }
                 //点击后同时进行本地app拉起与网页转跳行为
