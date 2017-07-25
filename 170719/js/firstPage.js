@@ -15,7 +15,7 @@
 	})
 	var viewScroll = function(Bt){
 		var $this = Bt;
-		$(".rule").css("margin-bottom","280px");
+		$(".rule").css("margin-bottom","300px");
 		$this.scrollIntoView();
 		setTimeout(function(){
 			$(".rule").css("margin-bottom","40px");

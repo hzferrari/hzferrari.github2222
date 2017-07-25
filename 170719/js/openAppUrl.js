@@ -41,12 +41,13 @@ $(function(){
                     _count = 0,
                     intHandle = 0;
   
-                //启动间隔20ms运行的定时器，并检测累计消耗时间是否超过3000ms，超过则结束
+                //启动间隔20ms运行的定时器，并检测累计消耗时间是否超过设定值，超过则结束
+                //累计时间 = 125*20ms，且必须小于5000ms。
                 intHandle = setInterval(function(){
                     _count++;
                     var elsTime = +(new Date()) - _clickTime;
                     
-                    if (_count>= 200 || elsTime > 5000 ) {
+                    if (_count>= 125 || elsTime > 5000 ) {
                         clearInterval(intHandle);
                         //计算结束，根据不同，做不同的跳转处理，0表示已经跳转APP成功了
                         if ( elsTime > 5000 || document.hidden || document.webkitHidden) {
@@ -65,17 +66,13 @@ $(function(){
                 _openAppUrl = function(url){
                     location.href = url;
                      
-                    //点击按钮后0.1+2=2.1秒没有转跳到app则转跳下载链接
-                    //(checkOpen()定时不能超过2秒)
-                    setTimeout(function(){
-                        checkOpen(function(opened){
-                            //跳转app失败
-                            if(opened === 1){
-                                location.href = downLoadUrl;
-                            }
-                        });
-                    },100);
-                    
+                    //点击按钮后2.5秒没有转跳到app则转跳下载链接
+                    checkOpen(function(opened){
+                        //跳转app失败
+                        if(opened === 1){
+                            location.href = downLoadUrl;
+                        }
+                    });      
                     
                 }     
                 _openAppUrl(url);
