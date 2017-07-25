@@ -92,7 +92,7 @@ $(function(){
     }
   
   
-    $("#openAndDown").on("click",function(){
+    $(".openAndDown").on("click",function(){
         _openApp();
         return false;
     });
