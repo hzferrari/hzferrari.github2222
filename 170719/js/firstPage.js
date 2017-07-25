@@ -73,9 +73,9 @@
  	   		$("#getAward").css("cssText","width:40% !important");},300);
  	});
 	//“去和彩云使用”按钮效果
-	$("#openAndDown").click(function(){
-	   $("#openAndDown").css("cssText","width:58% !important");
-	   setTimeout(function(){$("#openAndDown").css("cssText","width:60% !important");},400);
+	$(".openAndDown").click(function(){
+	   $(".openAndDown").css("cssText","width:58% !important");
+	   setTimeout(function(){$(".openAndDown").css("cssText","width:60% !important");},400);
 	});
 	//活动规则弹窗
 	$(".Windowpop2").click(function () {
@@ -85,11 +85,14 @@
 	      $("#box3").children(".box1").css("margin-top","10%");
 	   },200);
 	})
-	//点击领取弹窗，领取成功弹出#box1，否则弹出#box2
+	//点击领取弹窗，领取成功弹出#box1，否则弹出#box2，重复领取则弹出#box4
 	$(".Windowpop").click(function () {
 	   var WinID="box";
-	   var state=1;//后台返回状态，1为成功，0表示失败
-	   if(state)  WinID=WinID+1;
+	   var state=2;//后台返回状态，1为成功，0表示失败,2表示重复领取
+	   if(state)  {
+		   if(state==2)  WinID=WinID+5;
+		   else  WinID=WinID+1;
+	   }
 	   else WinID=WinID+2;
 
 	   $("#"+WinID).show();
