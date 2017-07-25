@@ -1,14 +1,20 @@
 
+	var phClickFlag = false;
 	//点击输入框时，页面滚动到该位置
 	$("#phoneNum,#identifyCode").on("click",function(){
-		$this = this;
+		phClickFlag = true;
+		var $this = this;
+		viewScroll($this);
+		
+	})
+	var viewScroll = function(Bt){
+		var $this = Bt;
 		$(".rule").css("margin-bottom","280px");
 		$this.scrollIntoView();
 		setTimeout(function(){
 			$(".rule").css("margin-bottom","40px");
 		},20);
-		
-	})
+	}
 	//点击“获取验证码”按钮，检测输入是否符合规则，切是否属于白名单
 	document.getElementById("getCode").onclick = function(){
 		checkWhithList(this);
