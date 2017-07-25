@@ -36,7 +36,7 @@ $(function(){
             }
 
             //使用计算时差的方式判断是否已经拉起app
-            var checkOpen = function (abc){
+            var checkOpen = function(abc){
                 var _clickTime = +(new Date()),
                     _count = 0,
                     intHandle = 0;
@@ -76,12 +76,15 @@ $(function(){
                     // },2000);
 
                     //点击按钮后3秒没有转跳到app则转跳下载链接
-                    checkOpen(function(opened){
-                        //跳转app失败
-                        if(opened === 1){
-                            location.href = downLoadUrl;
-                        }
-                    });
+                    setTimeout(function(){
+                        checkOpen(function(opened){
+                            //跳转app失败
+                            if(opened === 1){
+                                location.href = downLoadUrl;
+                            }
+                        });
+                    },1000);
+                    
                     
                 }     
                 _openAppUrl(url);
