@@ -75,7 +75,8 @@ $(function(){
                     //     _show();
                     // },2000);
 
-                    //点击按钮后3秒没有转跳到app则转跳下载链接
+                    //点击按钮后0.1+2=2.1秒没有转跳到app则转跳下载链接
+                    //(checkOpen()定时不能超过2秒)
                     setTimeout(function(){
                         checkOpen(function(opened){
                             //跳转app失败
@@ -83,7 +84,7 @@ $(function(){
                                 location.href = downLoadUrl;
                             }
                         });
-                    },1000);
+                    },100);
                     
                     
                 }     
