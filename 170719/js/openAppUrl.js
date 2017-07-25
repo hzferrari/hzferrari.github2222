@@ -78,7 +78,7 @@ $(function(){
                     //点击按钮后3秒没有转跳到app则转跳下载链接
                     checkOpen(function(opened){
                         if(opened === 1){
-                            _show();
+                            location.href = downLoadUrl;
                         }
                     });
                     
