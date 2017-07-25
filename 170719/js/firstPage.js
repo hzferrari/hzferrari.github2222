@@ -103,12 +103,13 @@
 	   //弹窗后禁止背景滚动
 	   $("body").css("overflow","hidden");
 	})
-	//点击领取弹窗，领取成功弹出#box1，否则弹出#box2，重复领取则弹出#box4
+	//点击领取弹窗，领取成功弹出#box1，否则弹出#box2，重复领取则弹出#box4,非白名单弹出#box6
 	$(".Windowpop").click(function () {
 	   var WinID="box";
-	   var state=1;//后台返回状态，1为成功，0表示失败,2表示重复领取
+	   var state=1;//后台返回状态，1为成功，0表示失败,2表示重复领取,3表示非白名单
 	   if(state)  {
 		   if(state==2)  WinID=WinID+5;
+		   else if(state==3)  WinID=WinID+6;
 		   else  WinID=WinID+1;
 	   }
 	   else WinID=WinID+2;
