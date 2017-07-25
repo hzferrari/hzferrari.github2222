@@ -73,21 +73,18 @@
 			
 		}
 	}
-	document.getElementById("phoneNum").onclick = function(){
-		document.getElementById("warm").style.visibility = "hidden";
-	};
-
-	//点击“点击领取”按钮，检测验证码输入是否符合规则，切是否正确
-	//
+	// document.getElementById("phoneNum ").onclick = function(){
+	// 	document.getElementById("warm").style.visibility = "hidden";
+	// };
 
 
 	// ADD
 	//“点击领取”按钮效果
- 	$("#getAward").click(function(){
- 	   $("#getAward").css("cssText","width:35% !important");
- 	   setTimeout(function(){
- 	   		$("#getAward").css("cssText","width:40% !important");},300);
- 	});
+ 	// $("#getAward").click(function(){
+ 	//    $("#getAward").css("cssText","width:35% !important");
+ 	//    setTimeout(function(){
+ 	//    		$("#getAward").css("cssText","width:40% !important");},300);
+ 	// });
 	//“去和彩云使用”按钮效果
 	$(".openAndDown").click(function(){
 	   $(".openAndDown").css("cssText","width:58% !important");
@@ -103,22 +100,34 @@
 	   //弹窗后禁止背景滚动
 	   $("body").css("overflow","hidden");
 	})
-	//点击领取弹窗，领取成功弹出#box1，否则弹出#box2，重复领取则弹出#box4,非白名单弹出#box6
-	$(".Windowpop").click(function () {
-	   var WinID="box";
-	   var state=1;//后台返回状态，1为成功，0表示失败,2表示重复领取,3表示非白名单
-	   if(state)  {
-		   if(state==2)  WinID=WinID+5;
-		   else if(state==3)  WinID=WinID+6;
-		   else  WinID=WinID+1;
-	   }
-	   else WinID=WinID+2;
+	//“点击领取”弹窗，领取成功弹出#box1，否则弹出#box2，重复领取则弹出#box4,非白名单弹出#box6
+	$("#getAward").click(function () {
 
-	   $("#"+WinID).show();
-	   setTimeout(function () {
-	      $("#"+WinID).children(".box1").css("margin-top","10%");
-	   },200);
-	    $("body").css("overflow","hidden");
+		//“点击领取”按钮效果
+ 		$("#getAward").css("cssText","width:35% !important");
+ 	   	setTimeout(function(){
+ 	   		$("#getAward").css("cssText","width:40% !important");},300);
+		//检测验证码输入是否符合规则，切是否正确
+ 	   if($("#identifyCode").val().length <=0 ){
+ 	   		document.getElementById("warm").style.visibility = "visible";
+			document.getElementById("warm").textContent = "请输入验证码！";
+ 	   }else{
+ 	   	   var WinID="box";
+		   var state=1;//后台返回状态，1为成功，0表示失败,2表示重复领取,3表示非白名单
+		   if(state)  {
+			   if(state==2)  WinID=WinID+5;
+			   else if(state==3)  WinID=WinID+6;
+			   else  WinID=WinID+1;
+		   }
+		   else WinID=WinID+2;
+
+		   $("#"+WinID).show();
+		   setTimeout(function () {
+		      $("#"+WinID).children(".box1").css("margin-top","10%");
+		   },200);
+		    $("body").css("overflow","hidden");
+ 	   }
+
 	})
 
 	$(".wclose").click(function () {
@@ -128,6 +137,11 @@
 	   },600);
 	   //关闭弹窗后恢复背景滚动
 	   $("body").css("overflow","auto");
+	})
+
+	//点击输入框时隐藏下方提示文字
+	$("#phoneNum,#identifyCode").on("click",function(){
+		$("#warm").css("visibility","hidden");
 	})
 // loading 加载中
 	 $(function () {
