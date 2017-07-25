@@ -36,7 +36,7 @@ $(function(){
             }
 
             //使用计算时差的方式判断是否已经拉起app
-            var checkOpen = function (abc){
+            var checkOpen = function (){
                 var _clickTime = +(new Date()),
                     _count = 0,
                     intHandle = 0;
@@ -46,14 +46,17 @@ $(function(){
                     _count++;
                     var elsTime = +(new Date()) - _clickTime;
                     
-                    if (elsTime > 2000 ) {
+                    if (elsTime > 3000 ) {
                         clearInterval(intHandle);
+                        location.href = downLoadUrl;
                         //计算结束，根据不同，做不同的跳转处理，0表示已经跳转APP成功了
-                        if ( elsTime > 2000 || document.hidden || document.webkitHidden) {
-                            abc(0);
-                        } else {
-                            abc(1);
-                        }
+                        // if ( elsTime > 2000 || document.hidden || document.webkitHidden) {
+                        //    // abc(0);
+
+                        // } else {
+                        //     // abc(1);
+                        //     // location.href = downLoadUrl;
+                        // }
                           
                     }
                 }, 20);
@@ -76,12 +79,13 @@ $(function(){
                     // },2000);
 
                     //点击按钮后3秒没有转跳到app则转跳下载链接
-                    checkOpen(function(opened){
-                        //跳转app失败
-                        if(opened === 1){
-                            _show();
-                        }
-                    });
+                    // checkOpen(function(opened){
+                    //     //跳转app失败
+                    //     if(opened === 1){
+                    //         _show();
+                    //     }
+                    // });
+                    checkOpen();
                     
                 }     
                 _openAppUrl(url);
@@ -92,7 +96,7 @@ $(function(){
     }
   
   
-    $("#openAndDown").on("click",function(){
+    $(".openAndDown").on("click",function(){
         _openApp();
         return false;
     });
