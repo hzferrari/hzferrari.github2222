@@ -20,7 +20,7 @@
 <body>
     <h1>尝试打开APP的DEMO</h1>
     <div class = "custom-border border-color">
-        <a id = "tryOpenApp" href = "#">尝试打开和彩云app</a>
+        <a id = "tryOpenApp" href = "http://caiyun.feixin.10086.cn:7070/portal/client_new.jsp?v=mCloud_800">尝试打开和彩云app</a>
     </div>
     <div class = "remark">如果已安装和彩云则打开，未安装则打开下载页</div>
 
@@ -116,7 +116,7 @@
                             _count++;
                             var elsTime = +(new Date()) - _clickTime;
                             
-                            if (_count>=300 || elsTime > 3000 ) {
+                            if (elsTime > 3000 || _count>= 200  ) {
                                 clearInterval(intHandle);
                                 //计算结束，根据不同，做不同的跳转处理，0表示已经跳转APP成功了
                                 if ( elsTime > 3000 || document.hidden || document.webkitHidden) {
