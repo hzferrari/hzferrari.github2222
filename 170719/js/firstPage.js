@@ -1,5 +1,5 @@
 
-	var phClickFlag = false;
+	// var phClickFlag = false;
 	//点击输入框时，页面滚动到该位置
 	// $("#phoneNum").on("click",function(){
 	// 	phClickFlag = true;
