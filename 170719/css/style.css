@@ -1,7 +1,7 @@
 @charset "utf-8";
 @font-face{
 	font-family: "方正粗圆简体";
-	src:url('../fonts/方正粗圆简体.ttf');
+	src:url('../fonts/方正粗圆简体rip.ttf');
 }
 /*异步加载CSS文件方法
 @import url("http://a.tzt.cn/common/css/base-min.css");
