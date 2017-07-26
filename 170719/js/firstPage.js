@@ -108,7 +108,7 @@ $("#getAward").click(function () {
 		document.getElementById("warm").textContent = "请输入验证码！";
 	}else{
 		var WinID="box";
-		var state=1;//后台返回状态，1为成功，0表示失败,2表示重复领取,3表示非白名单
+		var state=2;//后台返回状态，1为成功，0表示失败,2表示重复领取,3表示非白名单
 		if(state)  {
 			if(state==2)  WinID=WinID+5;
 			else if(state==3)  WinID=WinID+6;
