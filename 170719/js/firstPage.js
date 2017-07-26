@@ -22,7 +22,7 @@
 // 	},20);
 // }
 
-//点击“获取验证码”按钮，检测输入是否符合规则，切是否属于白名单
+//点击“获取验证码”按钮，检测输入是否符合规则
 document.getElementById("getCode").onclick = function(){
 	checkWhithList(this);
 
