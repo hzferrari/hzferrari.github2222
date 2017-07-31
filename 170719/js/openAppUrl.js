@@ -34,7 +34,7 @@ $(function(){
             }
 
             //使用计算时差的方式判断是否已经拉起app
-            var checkOpen = function(abc){
+            var checkOpen = function(opened){
                 var _clickTime = +(new Date()),
                     _count = 0,
                     intHandle = 0;
@@ -49,9 +49,9 @@ $(function(){
                         clearInterval(intHandle);
                         //计算结束，根据不同，做不同的跳转处理，0表示已经跳转APP成功了
                         if ( elsTime > 5000 || document.hidden || document.webkitHidden) {
-                            abc(0);
+                            opened(0);
                         } else {
-                            abc(1);
+                            opened(1);
                         }
                           
                     }
@@ -59,19 +59,19 @@ $(function(){
             }
 
          
-               //点击后同时进行本地app拉起与网页转跳行为
-                _openAppUrl = function(url){
-                    location.href = url;
-                     
-                    //点击按钮后2.5秒没有转跳到app则转跳下载链接
-                    checkOpen(function(opened){
-                        //跳转app失败
-                        if(opened === 1){
-                            location.href = downLoadUrl;
-                        }
-                    });      
-                    
-                }     
+           //点击后同时进行本地app拉起与网页转跳行为
+            _openAppUrl = function(url){
+                location.href = url;
+                
+                //点击按钮后2.5秒没有转跳到app则转跳下载链接
+                checkOpen(function(opened){
+                    //跳转app失败
+                    if(opened === 1){
+                        location.href = downLoadUrl;
+                    }
+                });      
+                
+            }     
                          
         }     
         _openAppUrl(appUrl);
