@@ -105,6 +105,7 @@
 			<img src="images/icon1.png" id="icon1">
 			<!-- 限制只能输入数字（keyup时替换非数字字符为空） -->
 			<!-- 限制长度为11位的数字 -->
+			<!-- type="tel"与type="number"可默认弹出数字键盘，但后者不能使用maxlength属性 -->
 			<input type="tel" name="phoneNum" onkeyup="this.value=this.value.replace(/\D/g,'')" class="phoneNum" id="phoneNum" maxlength="11" min="11" placeholder="输入手机号码" >
 			<div class="innerBox" >
 				<!-- 限制长度为6位的数字 -->
