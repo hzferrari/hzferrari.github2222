@@ -60,8 +60,7 @@ $(function(){
                 }, 20);
             }
 
-            _openAppUrl = function(url){
-         
+           
                //点击后同时进行本地app拉起与网页转跳行为
                 _openAppUrl = function(url){
                     location.href = url;
@@ -77,7 +76,7 @@ $(function(){
                 }     
                 _openAppUrl(url);
       
-            }               
+                    
         }     
         _openAppUrl(appUrl);
     }
